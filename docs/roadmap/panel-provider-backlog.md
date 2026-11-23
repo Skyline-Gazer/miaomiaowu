@@ -1,9 +1,9 @@
 # Panel Provider 开发 Backlog
 
 状态：Research First / Not Yet Released  
-维护方式：当前 Fork 未开启 GitHub Issues（创建 Issue 返回 HTTP 410）；先将任务保存在仓库内。待 Owner 选择启用 Issues 后，再迁移为真实 Issue，避免重复记录。
+维护方式：GitHub Issues 已启用并创建以下四个正式任务。本文件作为与 Issues 对应的简要路线图；实际实施与验收证据以各 Issue/PR 为准。
 
-## P0 — Fork 更新安全
+## P0 — Fork 更新安全（[#2](https://github.com/Skyline-Gazer/miaomiaowu/issues/2)）
 
 - [ ] 防止内置更新直接安装 upstream 原版，覆盖包含 Plugin Host 的自定义二进制。
 - [ ] 区分上游版本通知和本 Fork Release 的应用通道。
@@ -14,7 +14,7 @@
 
 参考：../operations/fork-update-safety.md
 
-## P1 — 订阅获取插件宿主
+## P1 — 订阅获取插件宿主（[#3](https://github.com/Skyline-Gazer/miaomiaowu/issues/3)）
 
 - [ ] 把 Fetch 从外部订阅同步内部解耦为小而稳定的 SourceFetcher 接口。
 - [ ] 保留普通订阅行为；新增 Provider → Account → Subscription 关系。
@@ -25,7 +25,7 @@
 
 参考：../architecture/provider-plugin-host.md
 
-## P1 — MESL PoC 迁入正确基线
+## P1 — MESL PoC 迁入正确基线（[#4](https://github.com/Skyline-Gazer/miaomiaowu/issues/4)）
 
 - [ ] 本地审查 mesl-native / a8fa738 的真实 Diff 和测试证据（尚未上传本 Fork）。
 - [ ] 核实生产实际运行版本；不得按 Docker 镜像 v0.4.9 假定目标版本。
@@ -36,7 +36,7 @@
 
 参考：../research/mesl-panel-gate.md
 
-## P2 — 多机场扩展
+## P2 — 多机场扩展（[#5](https://github.com/Skyline-Gazer/miaomiaowu/issues/5)）
 
 - [ ] 研究 V2Board、XBoard、Custom 的真实 API 契约（不事先假设）。
 - [ ] 支持各 Provider 独立账户、凭据、状态、调度及故障隔离。
